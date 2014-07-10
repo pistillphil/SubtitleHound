@@ -28,7 +28,7 @@ Installation
 The installation can be performed using [CMake].  
 As a small help the commands using a Unix Shell are shown below:
 ```sh
-git clone github.com/pistillhil/SubtitleHound.git
+git clone https://github.com/pistillphil/SubtitleHound.git
 mkdir SubtitleHound/build && cd SubtitleHound/build
 cmake ..
 make
