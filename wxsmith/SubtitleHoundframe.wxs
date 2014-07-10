@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="SubtitleHoundFrame">
+		<title>Subtitle Hound</title>
+		<centered>1</centered>
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxMINIMIZE_BOX|wxCLIP_CHILDREN</style>
+		<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
+			<cols>1</cols>
+			<rows>3</rows>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON1" variable="btn_addVideoFiles" member="yes">
+					<label>Add Video Files</label>
+					<tooltip>Add video files which subtitles should be downloaded for.</tooltip>
+					<help>Add video files which subtitles should be downloaded for.</help>
+					<handler function="Onbtn_addVideoFiles" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxCheckListBox" name="ID_CHECKLISTBOX1" variable="lst_movieFiles" member="yes">
+					<size>350,250</size>
+					<style>wxLB_HSCROLL</style>
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON2" variable="btn_downloadSubtitles" member="yes">
+					<label>Download Subtitles</label>
+					<handler function="Onbtn_downloadSubtitles" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="no">
+			<object class="wxMenu" variable="Menu1" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="idMenuGithub" variable="MenuItem3" member="yes">
+					<label>View on Github</label>
+					<accel>Alt-G</accel>
+					<help>View Subtitle Hound on Github</help>
+					<handler function="OnGithub" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idMenuQuit" variable="MenuItem1" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu2" member="no">
+				<label>Help</label>
+				<object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>Show info about this application</help>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+		<object class="wxFileDialog" variable="fd_openFiles" member="yes">
+			<message>Select file</message>
+			<wildcard>Video Files|*.avi;*.mp4;*.mkv|All Files|*.*</wildcard>
+		</object>
+	</object>
+</wxsmith>
